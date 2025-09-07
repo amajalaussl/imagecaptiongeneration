@@ -13,7 +13,7 @@ A beautiful, modern web application that generates intelligent captions for any 
 
 ##  Live Demo
 
-[View Live Demo](https://your-username.github.io/ai-image-caption-generator)
+[View Live Demo](https://amajalaussl.github.io/imagecaptiongeneration/)
 
 ##  Tech Stack
 
@@ -26,27 +26,27 @@ A beautiful, modern web application that generates intelligent captions for any 
 ##  Installation
 
 1. **Clone the repository**
-   `ash
-   git clone https://github.com/your-username/ai-image-caption-generator.git
-   cd ai-image-caption-generator
-   `
+```bash
+git clone https://github.com/amajalaussl/imagecaptiongeneration.git
+cd imagecaptiongeneration
+```
 
 2. **Install dependencies**
-   `ash
-   npm install
-   `
+```bash
+npm install
+```
 
 3. **Set up environment variables**
-   - Create a .env.local file
-   - Add your Hugging Face API key:
-     `
-     VITE_HF_API_KEY=your_huggingface_api_key_here
-     `
+- Create a `.env.local` file
+- Add your Hugging Face API key:
+```
+VITE_HF_API_KEY=your_huggingface_api_key_here
+```
 
 4. **Start the development server**
-   `ash
-   npm run dev
-   `
+```bash
+npm run dev
+```
 
 ##  Getting Your Hugging Face API Key
 
@@ -65,20 +65,19 @@ A beautiful, modern web application that generates intelligent captions for any 
 4. Copy the caption to your clipboard
 
 ##  Project Structure
-
-`
- public/
-    test-image-generator.html
-    test-image.html
- src/
-    App.tsx
-    main.tsx
-    index.css
-    vite-env.d.ts
- .env.local
- package.json
- README.md
-`
+```
+public/
+  test-image-generator.html
+  test-image.html
+src/
+  App.tsx
+  main.tsx
+  index.css
+  vite-env.d.ts
+.env.local
+package.json
+README.md
+```
 
 ##  Contributing
 
@@ -105,4 +104,4 @@ If you have any questions or need help, please open an issue on GitHub.
 
 ---
 
-Made with  and AI
+Made with ❤️ and AI
