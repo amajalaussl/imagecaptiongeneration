@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Image Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        canvas { border: 2px solid #333; margin: 20px 0; }
+        button { padding: 10px 20px; font-size: 16px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1> Test Image Generator for AI Caption Generator</h1>
+    <p>This tool creates a sample image that you can use to test your AI caption generator.</p>
+    
+    <canvas id="testCanvas" width="400" height="300"></canvas>
+    <br>
+    <button onclick="downloadImage()"> Download Test Image</button>
+    
+    <h3>Instructions:</h3>
+    <ol>
+        <li>Click the "Download Test Image" button</li>
+        <li>Save the image to your computer</li>
+        <li>Upload it to your AI Caption Generator app</li>
+        <li>Test the real AI caption generation!</li>
+    </ol>
+
+    <script>
+        const canvas = document.getElementById('testCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Create a beautiful landscape image
+        // Sky gradient
+        const skyGradient = ctx.createLinearGradient(0, 0, 0, 150);
+        skyGradient.addColorStop(0, '#87CEEB');
+        skyGradient.addColorStop(1, '#E0F6FF');
+        ctx.fillStyle = skyGradient;
+        ctx.fillRect(0, 0, 400, 150);
+        
+        // Mountains
+        ctx.fillStyle = '#8B7355';
+        ctx.beginPath();
+        ctx.moveTo(0, 150);
+        ctx.lineTo(100, 80);
+        ctx.lineTo(200, 100);
+        ctx.lineTo(300, 60);
+        ctx.lineTo(400, 90);
+        ctx.lineTo(400, 150);
+        ctx.closePath();
+        ctx.fill();
+        
+        // Lake
+        ctx.fillStyle = '#4682B4';
+        ctx.fillRect(0, 150, 400, 150);
+        
+        // Sun
+        ctx.fillStyle = '#FFD700';
+        ctx.beginPath();
+        ctx.arc(320, 60, 25, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Trees
+        ctx.fillStyle = '#228B22';
+        for (let i = 0; i < 5; i++) {
+            const x = 50 + i * 70;
+            ctx.beginPath();
+            ctx.moveTo(x, 150);
+            ctx.lineTo(x - 15, 120);
+            ctx.lineTo(x + 15, 120);
+            ctx.closePath();
+            ctx.fill();
+        }
+        
+        // Add some clouds
+        ctx.fillStyle = '#FFFFFF';
+        ctx.beginPath();
+        ctx.arc(100, 50, 20, 0, 2 * Math.PI);
+        ctx.arc(120, 50, 25, 0, 2 * Math.PI);
+        ctx.arc(140, 50, 20, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        function downloadImage() {
+            const link = document.createElement('a');
+            link.download = 'test-landscape.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+    </script>
+</body>
+</html>
